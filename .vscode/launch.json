@@ -13,8 +13,8 @@
                 "--log-level",
                 "DEBUG",
                 "day1",
-                "run",
-                "data/day1/example.txt"
+                "part1",
+                "data/day1/input.txt"
             ]
         }
     ]

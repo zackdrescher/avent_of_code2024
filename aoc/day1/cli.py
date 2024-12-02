@@ -13,8 +13,12 @@ app = typer.Typer()
 
 
 @app.command()
-def run(file_path: Path) -> None:
+def part1(file_path: Path) -> None:
     """Run day1."""
     logger.info("Running day1")
     list1, list2 = load_lists(file_path)
-    typer.echo(f"list1: {list1}")
+    list1.sort()
+    list2.sort()
+    result = sum(abs(one - two) for one, two in zip(list1, list2))
+
+    typer.echo(f"Result: {result}")
