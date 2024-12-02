@@ -4,13 +4,14 @@ import logging
 
 import typer
 
-from . import day1
+from . import day1, day2
 
 logger = logging.getLogger(__name__)
 
 app = typer.Typer()
 
 app.add_typer(day1.app, name="day1")
+app.add_typer(day2.app, name="day2")
 
 
 @app.callback()
