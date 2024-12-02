@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "aoc"
+version = "0.1.0"
+description = ""
+authors = ["Zack Drescher <zackryandrescher@gmail.com>"]
+readme = "README.md"
+
+# Define the source folder
+packages = [{ include = "aoc" }]
+
+[tool.poetry.scripts]
+# Define the entry point for your package
+aoc = "aoc.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+beartype = "^0.19.0"
+typer = "^0.14.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.1"
+
+[build-system]
+requires = ["poetry-core"]
+
+build-backend = "poetry.core.masonry.api"
