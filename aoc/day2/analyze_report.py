@@ -15,3 +15,14 @@ def is_safe(report: list[int]) -> bool:
 
         previous = current
     return True
+
+
+def safe_with_problem_dampener(report: list[int]) -> bool:
+    """Check if the report is safe with a problem dampener."""
+    if is_safe(report):
+        return True
+
+    def drop_value(report: list[int], index: int) -> list[int]:
+        return report[:index] + report[index + 1 :]
+
+    return any(is_safe(drop_value(report, i)) for i in range(len(report)))
