@@ -12,9 +12,9 @@
             "args": [
                 "--log-level",
                 "DEBUG",
-                "day2",
+                "day3",
                 "part2",
-                "data/day2/example.txt"
+                "data/day3/example2.txt"
             ]
         }
     ]
