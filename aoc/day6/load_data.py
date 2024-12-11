@@ -3,16 +3,16 @@ from pathlib import Path
 from .guard import GUARD_SYMBOLS
 
 Board = list[list[str]]
-Postion = tuple[int, int]
+Position = tuple[int, int]
 
 
-def load_data(file_path: Path) -> tuple[Postion, Board]:
+def load_data(file_path: Path) -> tuple[Position, Board]:
     guard_position = None
     board = []
 
     with file_path.open() as file:
         for r, line in enumerate(file):
-            board.append(line.split())
+            board.append(list(line.strip()))
             for c, char in enumerate(line):
                 if char == "^":
                     if guard_position is not None:
